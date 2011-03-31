@@ -5,28 +5,29 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Suggest Results Demo</title>
+	<title>Fancy Suggest Demo</title>
 	<link rel="stylesheet" href="demo.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
 	<script src="../javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
 	
-	<script src="../suggest_results/jquery.suggest_results.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="../suggest_results/jquery.suggest_results.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="../fancy_input/jquery.fancy_input.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../fancy_input/jquery.fancy_suggest.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="../fancy_input/jquery.fancy_suggest.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
 	
 	<script src="demo.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function(){
 
-			$("#example1").suggest_results({
+			$("#example1").fancy_suggest({
 				data: exampleData
 			});
 			
-			$("#example2").suggest_results({
+			$("#example2").fancy_suggest({
 				url: "server-side.php",
 			});
 			
-			$("#example3").suggest_results({
+			$("#example3").fancy_suggest({
 				url: "server-side.php",
 				name: "example3",
 				no_results: false,
@@ -34,7 +35,7 @@
 				tpl_result_body: '<span class="title">{{title}}</span><span class="info">{{ info }}</span>'
 			});
 			
-			$("#example4").suggest_results({
+			$("#example4").fancy_suggest({
 				data: exampleData,
 				pos_top: 0,
 				pos_left: 20,
@@ -47,10 +48,10 @@
 	<style type="text/css" media="screen">
 		
 		/* Example 3 */
-		#suggest_results li span.info {
+		#fancy_suggest li span.info {
 			color: #888;
 		}
-		#suggest_results.example3 li {
+		#fancy_suggest.example3 li {
 			border-bottom-style: dashed;
 		}
 		
@@ -62,7 +63,7 @@
 
 <div id="container">
 	<p></p>
-	<h1>Suggest Results Demo</h1>
+	<h1>Fancy Suggest Demo</h1>
 	<p>
 		<strong>Results from local array:</strong><br />
 		<input type="text" name="example1" value="" id="example1" />
@@ -78,9 +79,6 @@
 	<p>
 		<strong>Customized position with results from local array:</strong><br />
 		<input type="text" name="example4" value="" id="example4" />
-	</p>
-	<p>
-		<a href="http://github.com/jimeh/suggest_results">GitHub Project Page</a>
 	</p>
 </div>
 
