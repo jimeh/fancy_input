@@ -131,6 +131,7 @@
       var terms = $.trim(this.get_value(elm, options));
       if (options.exact_match) terms = terms.split(/\s/);
       if ((typeof(terms) == "string" && terms != "") || (typeof(terms) == "object" && terms.length > 0)) {
+        this.selected_result = null;
         if (typeof(options.url) === "string" && options.url !== "") {
           this.query_for_data(elm, options);
         } else {
@@ -216,6 +217,9 @@
       if (results.length > 0) {
         this.render(elm, results, options);
         this.show();
+        if (results.length == 1) {
+          this.select_next(elm, options);
+        };
       } else {
         this.no_results(elm, options);
       };
