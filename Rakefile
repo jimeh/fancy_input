@@ -2,16 +2,16 @@ require 'fileutils'
 
 
 RLS_PATH = "_releases"
-RLS_IGNORE = ["#{RLS_PATH}/*", ".git*", "*.DS_Store", "Rakefile"]
+RLS_IGNORE = ["#{RLS_PATH}/*", ".git*", "*.DS_Store", "Rakefile", "tmp/*"]
 
 
 desc "Build a release package"
 task :release do
   FileUtils.mkdir_p(RLS_PATH)
-  file = File.read("suggest_results/jquery.suggest_results.js")
-  if file =~ /\* Suggest Results v([0-9\.]+)\n/
+  file = File.read("fancy_input/jquery.fancy_input.js")
+  if file =~ /\* Fancy Input v([0-9\.]+)\n/
     version = $1
-    target = "#{RLS_PATH}/jquery.suggest_results-#{version}.zip"
+    target = "#{RLS_PATH}/jquery.fancy_input-#{version}.zip"
     if File.exist?(target)
       puts "ERROR: #{target} already exists."
     else
@@ -24,7 +24,9 @@ end
 
 desc "Update demo page."
 task :demo do
-  rsync(".", "jimeh@jimeh.me:jimeh.me/files/projects/suggest_results", ["--exclude='#{RLS_PATH}'", "--delete"])
+  rsync(".", "jimeh@jimeh.me:jimeh.me/files/projects/fancy_input", ["--exclude='#{RLS_PATH}'",
+                                                                    "--exclude='tmp'",
+                                                                    "--delete"])
 end
 
 
