@@ -1,7 +1,7 @@
 /*!
  * Fancy Suggest
  *
- * Copyright (c) 2010 Jim Myhrberg.
+ * Copyright (c) 2011 Jim Myhrberg.
  * Released under the MIT license.
  */
 (function($){
