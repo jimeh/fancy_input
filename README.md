@@ -10,11 +10,11 @@ Check out the [Demo][].
 
 First of all you will need [jQuery][], visit their [site][jquery] for more info.
 
-Then include both `jquery.fancy_input.js` and `jquery.fancy_input.css` on your page.
+Then include the required files:
 
     <script src="/fancy_input/jquery.fancy_input.js" type="text/javascript"></script>
 	<script src="/fancy_input/jquery.fancy_suggest.js" type="text/javascript"></script>
-    <link href="/fancy_input/jquery.fancy_input.css" rel="stylesheet" type="text/css" />
+    <link href="/fancy_input/jquery.fancy_suggest.css" rel="stylesheet" type="text/css" />
 
 ## Usage
 
