@@ -1,5 +1,5 @@
 /*!
- * Fancy Input v0.2.0
+ * Fancy Input v0.2.1
  *
  * Copyright (c) 2010 Jim Myhrberg.
  * Released under the MIT license.
