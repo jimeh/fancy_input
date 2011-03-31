@@ -144,5 +144,5 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 [jquery]: http://jquery.com/
-[demo]: http://files.jimeh.me/projects/fancy_input/demo/
+[demo]: http://files.jimeh.me/projects/fancy_input/demo/fancy_suggest.html
 
