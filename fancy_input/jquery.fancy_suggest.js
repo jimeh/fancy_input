@@ -36,7 +36,7 @@
             break;
           case Self.keys.RETURN:
             if (Self.selected_result !== null) {
-              Self.activate_selected($options);
+              Self.activate_selected($e, $options);
               return false;
             }
             break;
